@@ -46,7 +46,7 @@ Rating.dat实际的user数目是69878,
 Tags.dat 
 有些user有tag没rating。有些user有rating没tag。
 
-![rating_distribution](raw/master/image/rating distribution.png)
+![rating_distribution](raw/master/image/rating_distribution.png)
 
 ![default_124.jpg](raw/master/o_1311.gif)
 
