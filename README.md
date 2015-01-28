@@ -1,3 +1,4 @@
+之前有的代码放在服务器，有的放在本地，搞得乱七八糟，在这里作一下整理
 # 简介 #
 
 * MovieLens 100k - Consists of 100,000 ratings from 1000 users on 1700 movies. （rating最少的user的评分个数是20。Movie最少的评分是1）
@@ -47,8 +48,8 @@ Tags.dat
 
 ![default_128.jpg](http://www.sciencenet.cn/kxwad/p/2015/0107/o_1311.gif)
 
-![default_124.jpg](o_1311.gif)
+![default_124.jpg](raw/master/o_1311.gif)
 
-![default_124.jpg](o_1311.gif)
+![default_124.jpg](https://bitbucket.org/song_xu/movielens/raw/master/o_1311.gif)
 
 ![图片2.jpg](https://bitbucket.org/repo/nAExB5/images/3014536092-%E5%9B%BE%E7%89%872.jpg)
