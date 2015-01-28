@@ -74,4 +74,36 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 
 ## tag分析 ##
 
-有些user有tag没rating。有些user有rating没tag。
+* 有些user有tag没rating。有些user有rating没tag。
+
+1.1. 4009个user有过标注，10677部电影中共7601个movie有过标注
+
+1.2.做词典
+
+tag做词典，单个word有意义，整个tag也有意义，因此这两者可以都考虑。但是当tag和word都考虑的时候，每个word和整个tag具有相同的重要性权重，因此如果存在tag的话，可以强化tag的权重，弱化word的权重。
+
+1.3．做词典后，去除没有单词的user，movie，剩下3878个user，7545个movie； 对rating进行选取，剩余2250个user，7468个movie，885142个rating。
+
+1.4 利用删减的user，movie重新做词典
+剩余与user，movie相关的tag共55656个（见words.dat）。由于删掉的是tag文件中的行，同时user，movie的list也会减少。剩余2250个user，6238个movie，55656个tag
+
+2.重新做文集
+2250个user，6238个movie，859778个rating, 55656个tag。利用part 2.2:  get less tags 
+更新tags.mat
+
+2.1从Large数据集做小数据集，input：large文件夹数据，output：small文件夹数据集(Small_dataset.m)
+
+2.2从Large数据集做小数据集，input：large文件夹数据，output：small文件夹数据集(Small_dataset.m)
+
+去掉tag中的一些低频词(<5)，还剩19673个tag,1072个user，2202个movie（index2mat.mat）。
+
+2,3,4之间通过依次调用Index2mat.m，small_dataset.m, java来实现的，最终得到数据集4
+User：1033
+User	Movie	Tag	Rating		
+1033	1996	17552	323546		
+
+
+
+## 待统计 ##
+* 分时间段，一个movie在不同时间段的popular程度（是否被选择）变化，以及平均评分变化（是否被好评）情况。
+
