@@ -36,20 +36,40 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 
 
 ## 1.  movie分析 ##
-最大的movieID 是65133，实际电影数10677
-前第90部电影都等于其ID，第91部电影实际的ID是92
-为什么实际有10677部电影，少了4部电影？？经过对比ratings.dat和movies.dat两个文件，发现movies.dat中的“25942::Louisiana Story (1948)::Drama”没有用户评分。另外三部电影就没有找了。
+
+* 最大的movieID 是65133，实际电影数10677
+* 前第90部电影都等于其ID，第91部电影实际的ID是92
+* 为什么实际有10677部电影，少了4部电影？？经过对比ratings.dat和movies.dat两个文件，发现movies.dat中的“25942::Louisiana Story (1948)::Drama”没有用户评分。另外三部电影就没有找了。
 
 ## 2. user分析 ##
-最大的userID是71567，
-Rating.dat实际的user数目是69878,
-Tags.dat 
-有些user有tag没rating。有些user有rating没tag。
+* 最大的userID是71567
+* Rating.dat实际的user数目是69878,
+
+
 
 ![rating_distribution](raw/master/image/rating_distribution.png)
 
 ![default_124.jpg](raw/master/o_1311.gif)
 
-![default_124.jpg](https://bitbucket.org/song_xu/movielens/raw/master/o_1311.gif)
 
-![图片2.jpg](https://bitbucket.org/repo/nAExB5/images/3014536092-%E5%9B%BE%E7%89%872.jpg)
+## 3. user-movie分析 ##
+
+* Movie count per user
+* 71567用户的评分电影数目，user-id :account，x轴1:71567.
+* 比如其中纵坐标最大的点是(59269,7359)，表示user59269总共对7359个评分记录，(不重复评分的话就等价于评分过7359部电影)。
+* 纵轴最小的值（除0外）就是20，就是说用户至少有20个评分记录。
+* X轴1:7357，最大点（7359，1），表示给7359个电影评分过的user只有一个。
+* Y轴0：inf，最大（20,1902），表示给20部电影评分过的user有1902个
+* 说明绝大多数的用户只评论了少部分电影，只有少部分用户评论了较多电影
+
+
+## 4. rating distribution ##
+
+
+
+## tag分析 ##
+
+有些user有tag没rating。有些user有rating没tag。
+
+
+
