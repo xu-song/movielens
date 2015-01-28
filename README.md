@@ -45,6 +45,6 @@ Rating.dat实际的user数目是69878,
 Tags.dat 
 有些user有tag没rating。有些user有rating没tag。
 
-![default_128.jpg](https://bitbucket.org/repo/nAExB5/images/3132788616-default_128.jpg)
+![default_128.jpg](http://www.sciencenet.cn/kxwad/p/2015/0107/o_1311.gif)
 
 ![图片2.jpg](https://bitbucket.org/repo/nAExB5/images/3014536092-%E5%9B%BE%E7%89%872.jpg)
