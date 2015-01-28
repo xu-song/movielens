@@ -48,8 +48,8 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 * 最高点是（256,34864），也就是movie_ID是296的电影，被评价过最多。（即296::Pulp Fiction (1994)::Comedy|Crime|Drama）
 
 ![user_count_per_movie1](raw/master/image/user_count_per_movie.png)
-![user_count_per_movie2](raw/master/image/user_count_per_movie_statistic.png)
-![user_count_per_movie3](raw/master/image/user_count_per_movie_statistic_log.png)
+![user_count_per_movie2](raw/master/image/movierating-num-all.png)
+
 
 ## 2. user分析 ##
 * 最大的userID是71567
@@ -62,9 +62,8 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 * Y轴0：inf，最大（20,1902），表示给20部电影评分过的user有1902个
 * 说明绝大多数的用户只评论了少部分电影，只有少部分用户评论了较多电影
 
-![movie_count_per_user](raw/master/image/movie_count_per_user.png)
-![movie_count_per_user2](raw/master/image/movie_count_per_user_statistic.png)
-![movie_count_per_user3](raw/master/image/movie_count_per_user_statistic_loglog.jpg)
+![movie_count_per_user1](raw/master/image/movie_count_per_user.png)
+![movie_count_per_user2](raw/master/image/userrating-num-all.png)
 
 ## 4. rating distribution ##
 
@@ -106,4 +105,3 @@ User	Movie	Tag	Rating
 
 ## 待统计 ##
 * 分时间段，一个movie在不同时间段的popular程度（是否被选择）变化，以及平均评分变化（是否被好评）情况。
-
