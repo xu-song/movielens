@@ -74,7 +74,10 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 ## tag分析 ##
 
 * 有些user有tag没rating。有些user有rating没tag。
+* 低分tag
+* 高分tag
 
+## 数据清洗 ##
 1.1. 4009个user有过标注，10677部电影中共7601个movie有过标注
 
 1.2.做词典
