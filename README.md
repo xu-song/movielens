@@ -69,7 +69,7 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 
 * 说明评分较多的是3，4分，总体来说更加偏向高分，也就是用户一般更倾向于对自己喜欢的电影进行评分。并计算得到平均评分是3.5124
 
-![rating_distribution](raw/master/image/rating_distribution.png)
+![rating_distribution](raw/master/image/rating-distribution.png)
 
 ## tag分析 ##
 
