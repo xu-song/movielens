@@ -1,5 +1,5 @@
 之前有的代码放在服务器，有的放在本地，搞得乱七八糟，在这里作一下整理
-# 简介 #
+# 一、简介 #
 
 * MovieLens 100k - Consists of 100,000 ratings from 1000 users on 1700 movies. （rating最少的user的评分个数是20。Movie最少的评分是1）
 * MovieLens 1M - Consists of 1 million ratings from 6000 users on 4000 movies.
@@ -31,7 +31,7 @@ Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of 
 
 -------
 
-# MovieLens 10M 的分析 #
+# 二、MovieLens 10M 的分析 #
 
 This data set contains 10000054 ratings and 95580 tags applied to 10681 movies by 71567 users 。All users selected had rated at least 20 movies.
 
@@ -72,13 +72,17 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 
 ![rating_distribution](raw/master/image/rating-distribution.png)
 
+
 ## tag分析 ##
 
 * 有些user有tag没rating。有些user有rating没tag。
 * 低分tag
 * 高分tag
 
-## 数据清洗 ##
+## 5. 待统计 ##
+* 分时间段，一个movie在不同时间段的popular程度（是否被选择）变化，以及平均评分变化（是否被好评）情况。
+
+# 三、数据清洗 #
 1.1. 4009个user有过标注，10677部电影中共7601个movie有过标注
 
 1.2.做词典
@@ -107,5 +111,3 @@ User	Movie	Tag	Rating
 
 
 
-## 待统计 ##
-* 分时间段，一个movie在不同时间段的popular程度（是否被选择）变化，以及平均评分变化（是否被好评）情况。
