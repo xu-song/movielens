@@ -32,7 +32,7 @@ Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of 
 -------
 
 # 二、MovieLens 10M 统计分析 #
-* 代码：statistics.m
+代码：statistics.m
 
 This data set contains 10000054 ratings and 95580 tags applied to 10681 movies by 71567 users 。All users selected had rated at least 20 movies.
 
@@ -86,47 +86,39 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 -------
 
 # 三、数据清洗 #
-* 代码：small_dataset.m
 
-1.1. 4009个user有过标注，10677部电影中共7601个movie有过标注
+代码：small_dataset.m
 
-1.2.做词典
-
-tag做词典，单个word有意义，整个tag也有意义，因此这两者可以都考虑。但是当tag和word都考虑的时候，每个word和整个tag具有相同的重要性权重，因此如果存在tag的话，可以强化tag的权重，弱化word的权重。
-
-1.3 去除没有单词的user，movie，剩下3878个user，7545个movie； 对rating进行选取，剩余2250个user，7468个movie，885142个rating。
-
-1.4 利用删减的user，movie重新做词典。
-剩余与user，movie相关的tag共55656个（见words.dat）。由于删掉的是tag文件中的行，同时user，movie的list也会减少。剩余2250个user，6238个movie，55656个tag
-
+1. 过滤
+    1. 4009个user有过标注，10677部电影中共7601个movie有过标注
+    2. 低频词过滤+做词典。tag做词典，单个word有意义，整个tag也有意义，因此这两者可以都考虑。但是当tag和word都考虑的时候，每个word和整个tag具有相同的重要性权重，因此如果存在tag的话，可以强化整体tag的权重，弱化部分word的权重。
+    3. 去除没有单词的user和movie，剩下3878个user，7545个movie；对rating≥20过滤，剩余2250个user，7468个movie，885142个rating。
+    4. 重新做词典。剩余与user，movie相关的tag共55656个（见words.dat）。删掉user和movie的同时，删除对应的tag记录，使得一部分user，movie会tag缺失，因此再过滤。剩余2250个user，6238个movie，859778个rating, 55656个tag
 2. 重新做文集
-2250个user，6238个movie，859778个rating, 55656个tag。利用part 2.2:  get less tags 
-更新tags.mat
+    1. 从Large数据集做小数据集，input：large文件夹数据，output：small文件夹数据集(Small_dataset.m)
+    2. 从Large数据集做小数据集，input：large文件夹数据，output：small文件夹数据集(Small_dataset.m)
+    3. 去掉tag中的一些低频词(<5)，还剩19673个tag,1072个user，2202个movie（index2mat.mat）。
+    4. 2,3,4之间通过依次调用Index2mat.m，small_dataset.m, java来实现的，最终得到数据集4
 
-2.1从Large数据集做小数据集，input：large文件夹数据，output：small文件夹数据集(Small_dataset.m)
-
-2.2从Large数据集做小数据集，input：large文件夹数据，output：small文件夹数据集(Small_dataset.m)
-
-去掉tag中的一些低频词(<5)，还剩19673个tag,1072个user，2202个movie（index2mat.mat）。
-
-2,3,4之间通过依次调用Index2mat.m，small_dataset.m, java来实现的，最终得到数据集4
 | user  | movie |  tag | rating |
 | ------ | -------- | -------- | -------- | 
 | 1033 | 1996  |17552 | 323546 |
 
 -------
 # 四、代码说明 #
-* 1. 统计相关
+* 统计相关
     * statistics.m:  `MovieLens 10M 统计分析`
     * 
-* 2. 数据清洗相关
-
-* 3. 格式转换相关：
+* 数据清洗相关
+    * small_dataset.m
+    * 
+* 格式转换相关：
+    * to_libfm_format.m
 
 
 -------
 
-# 四、文件说明 #
+# 五、文件说明 #
 
 * 目录：ml-10M
     * ratings.mat = rating.dat
