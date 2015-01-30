@@ -31,7 +31,8 @@ Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of 
 
 -------
 
-# 二、MovieLens 10M 的分析 #
+# 二、MovieLens 10M 的统计分析 #
+* 代码：statistics.m
 
 This data set contains 10000054 ratings and 95580 tags applied to 10681 movies by 71567 users 。All users selected had rated at least 20 movies.
 
@@ -85,6 +86,8 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 -------
 
 # 三、数据清洗 #
+* 代码：small_dataset.m
+
 1.1. 4009个user有过标注，10677部电影中共7601个movie有过标注
 
 1.2.做词典
