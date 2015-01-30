@@ -114,8 +114,11 @@ User：1033
 User	Movie	Tag	Rating		
 1033	1996	17552	323546
 
--------
+| user  | movie |  tag | rating |
+| ------ | -------- | -------- | -------- | 
+| 1033 | 1996  |17552 | 323546 |
 
+-------
 # 四、代码说明 #
 * 1. 统计相关
     * statistics.m:  `MovieLens 10M 统计分析`
@@ -135,7 +138,3 @@ User	Movie	Tag	Rating
 * 目录：ml-10M-processed
 
 文件：
-
-
-
-
