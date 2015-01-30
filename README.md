@@ -110,10 +110,6 @@ tag做词典，单个word有意义，整个tag也有意义，因此这两者可�
 去掉tag中的一些低频词(<5)，还剩19673个tag,1072个user，2202个movie（index2mat.mat）。
 
 2,3,4之间通过依次调用Index2mat.m，small_dataset.m, java来实现的，最终得到数据集4
-User：1033
-User	Movie	Tag	Rating		
-1033	1996	17552	323546
-
 | user  | movie |  tag | rating |
 | ------ | -------- | -------- | -------- | 
 | 1033 | 1996  |17552 | 323546 |
