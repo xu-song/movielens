@@ -82,6 +82,8 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 ## 5. 待统计 ##
 * 分时间段，一个movie在不同时间段的popular程度（是否被选择）变化，以及平均评分变化（是否被好评）情况。
 
+-------
+
 # 三、数据清洗 #
 1.1. 4009个user有过标注，10677部电影中共7601个movie有过标注
 
@@ -107,7 +109,4 @@ tag做词典，单个word有意义，整个tag也有意义，因此这两者可�
 2,3,4之间通过依次调用Index2mat.m，small_dataset.m, java来实现的，最终得到数据集4
 User：1033
 User	Movie	Tag	Rating		
-1033	1996	17552	323546		
-
-
-
+1033	1996	17552	323546
