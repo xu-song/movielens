@@ -1,5 +1,5 @@
 之前有的代码放在服务器，有的放在本地，搞得乱七八糟，在这里作一下整理
-# 简介 #
+# 一、简介 #
 
 * MovieLens 100k - Consists of 100,000 ratings from 1000 users on 1700 movies. （rating最少的user的评分个数是20。Movie最少的评分是1）
 * MovieLens 1M - Consists of 1 million ratings from 6000 users on 4000 movies.
@@ -29,8 +29,9 @@ Tags are user generated metadata about movies. Each tag is typically a single wo
 
 Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.
 
+-------
 
-# MovieLens 10M 的分析 #
+# 二、MovieLens 10M 的分析 #
 
 This data set contains 10000054 ratings and 95580 tags applied to 10681 movies by 71567 users 。All users selected had rated at least 20 movies.
 
@@ -69,12 +70,21 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 
 * 说明评分较多的是3，4分，总体来说更加偏向高分，也就是用户一般更倾向于对自己喜欢的电影进行评分。并计算得到平均评分是3.5124
 
-![rating_distribution](raw/master/image/rating_distribution.png)
+![rating_distribution](raw/master/image/rating-distribution.png)
+
 
 ## tag分析 ##
 
 * 有些user有tag没rating。有些user有rating没tag。
+* 低分tag
+* 高分tag
 
+## 5. 待统计 ##
+* 分时间段，一个movie在不同时间段的popular程度（是否被选择）变化，以及平均评分变化（是否被好评）情况。
+
+-------
+
+# 三、数据清洗 #
 1.1. 4009个user有过标注，10677部电影中共7601个movie有过标注
 
 1.2.做词典
@@ -99,9 +109,4 @@ tag做词典，单个word有意义，整个tag也有意义，因此这两者可�
 2,3,4之间通过依次调用Index2mat.m，small_dataset.m, java来实现的，最终得到数据集4
 User：1033
 User	Movie	Tag	Rating		
-1033	1996	17552	323546		
-
-
-
-## 待统计 ##
-* 分时间段，一个movie在不同时间段的popular程度（是否被选择）变化，以及平均评分变化（是否被好评）情况。
+1033	1996	17552	323546
