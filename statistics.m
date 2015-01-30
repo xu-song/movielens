@@ -29,8 +29,8 @@ figure
 plot(1:N_user,count_user,'.')
 xlabel('user id'),ylabel('movie count per user')
 %set(gcf,'Position',[100 100 500 320]);
-set(gcf, 'Units', 'Inches', 'Position', [0 0 4 3])
-set(gcf, 'PaperUnits', 'inches', 'PaperPosition', [0 0 4 3]);
+set(gcf, 'Units', 'Inches', 'Position', [0 0 3 2])
+set(gcf, 'PaperUnits', 'inches', 'PaperPosition', [0 0 3 2]);
 print(gcf, '-dpng', 'image/movie_count_per_user.png');
 %saveas(gcf,'image/movie_count_per_user','png');
 
@@ -68,8 +68,8 @@ figure
 plot(1:N_movie,count_movie,'.')
 xlabel('movie id'),ylabel('user count per movie');
 %set(gcf,'Position',[100 100 500 320]);
-set(gcf, 'Units', 'Inches', 'Position', [0 0 4 3])
-set(gcf, 'PaperUnits', 'inches', 'PaperPosition', [0 0 4 3]);
+set(gcf, 'Units', 'Inches', 'Position', [0 0 3 2])
+set(gcf, 'PaperUnits', 'inches', 'PaperPosition', [0 0 3 2]);
 print(gcf, '-dpng', 'image/user_count_per_movie.png');
 
 % 3.2
@@ -104,8 +104,8 @@ end
 
 figure
 bar(1:0.5:5,rating_count)
-set(gcf, 'Units', 'Inches', 'Position', [0 0 4 3])
-set(gcf, 'PaperUnits', 'inches', 'PaperPosition', [0 0 4 3]);
+set(gcf, 'Units', 'Inches', 'Position', [0 0 3 2])
+set(gcf, 'PaperUnits', 'inches', 'PaperPosition', [0 0 3 2]);
 % set(gcf,'Position',[100 100 500 320]);
 print(gcf, '-dpng', 'image/rating-distribution.png');
 
