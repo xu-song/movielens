@@ -1,4 +1,4 @@
-之前有的代码放在服务器，有的放在本地，搞得乱七八糟，在这里作一下整理
+
 # 一、简介 #
 
 * MovieLens 100k - Consists of 100,000 ratings from 1000 users on 1700 movies. （rating最少的user的评分个数是20。Movie最少的评分是1）
@@ -49,8 +49,8 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 * 最少的评分记录是1次，有100部电影的评分数目是1
 * 最高点是（256,34864），也就是movie_ID是296的电影，被评价过最多。（即296::Pulp Fiction (1994)::Comedy|Crime|Drama）
 
-![user_count_per_movie1](raw/master/image/user_count_per_movie.png)
-![user_count_per_movie2](raw/master/image/movierating-num-all.png)
+![user_count_per_movie1](image/user_count_per_movie.png)
+![user_count_per_movie2](image/movierating-num-all.png)
 
 
 ## 2. user分析 ##
@@ -64,14 +64,14 @@ This data set contains 10000054 ratings and 95580 tags applied to 10681 movies b
 * Y轴0：inf，最大（20,1902），表示给20部电影评分过的user有1902个
 * 说明绝大多数的用户只评论了少部分电影，只有少部分用户评论了较多电影
 
-![movie_count_per_user1](raw/master/image/movie_count_per_user.png)
-![movie_count_per_user2](raw/master/image/userrating-num-all.png)
+![movie_count_per_user1](image/movie_count_per_user.png)
+![movie_count_per_user2](image/userrating-num-all.png)
 
 ## 3. rating distribution ##
 
 * 说明评分较多的是3，4分，总体来说更加偏向高分，也就是用户一般更倾向于对自己喜欢的电影进行评分。并计算得到平均评分是3.5124
 
-![rating_distribution](raw/master/image/rating-distribution.png)
+![rating_distribution](image/rating-distribution.png)
 
 
 ## 4. tag分析 ##
